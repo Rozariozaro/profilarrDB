@@ -1,0 +1,201 @@
+name: HEVC Preferred 1080p
+description: "This profile prefers efficient, streaming-like releases.  \n- Primary\
+  \ target: 1080p HEVC/x265 (~2.5\u20133GB max).  \n- Fallback: 1080p x264 if HEVC\
+  \ unavailable.  \n- Secondary fallback: 720p HEVC (~1.5\u20132GB), then 720p x264.\
+  \  \n- Streaming service sources (WEB-DL, WEBRip) are prioritized.  \n- Oversized\
+  \ encodes (above the set MB/min limit) are rejected.  \n- Automatic upgrades allowed\
+  \ only when seeders \u22655 and size/quality improvement is meaningful.  \nDesigned\
+  \ for a balance of quality, efficiency, and good availability."
+tags: []
+upgradesAllowed: true
+minCustomFormatScore: 0
+upgradeUntilScore: 1000
+minScoreIncrement: 100
+custom_formats:
+- name: 1080p
+  score: 300
+- name: 720p
+  score: 200
+- name: h265
+  score: 200
+- name: h265 (Efficient)
+  score: 200
+- name: x265
+  score: 200
+- name: x265 (Bluray)
+  score: 200
+- name: x265 (Efficient)
+  score: 200
+- name: x265 (WEB)
+  score: 200
+- name: 1080p Golden Popcorn
+  score: 100
+- name: 720p Golden Popcorn
+  score: 100
+- name: AMZN
+  score: 100
+- name: ATV
+  score: 100
+- name: ATVP
+  score: 100
+- name: BCORE
+  score: 100
+- name: CRIT
+  score: 100
+- name: DSNP
+  score: 100
+- name: HMAX
+  score: 100
+- name: HTSR
+  score: 100
+- name: HULU
+  score: 100
+- name: IQIYI
+  score: 100
+- name: iT
+  score: 100
+- name: iT (Missing)
+  score: 100
+- name: KCW
+  score: 100
+- name: MA
+  score: 100
+- name: MAX
+  score: 100
+- name: NF
+  score: 100
+- name: NOW
+  score: 100
+- name: PCOK
+  score: 100
+- name: PMTP
+  score: 100
+- name: ROKU
+  score: 100
+- name: SHO
+  score: 100
+- name: STAN
+  score: 100
+- name: TVING
+  score: 100
+- name: VIKI
+  score: 100
+- name: VIU
+  score: 100
+- name: WAVVE
+  score: 100
+- name: WeTV
+  score: 100
+- name: x264
+  score: 100
+- name: 1080p Bluray
+  score: 50
+- name: 1080p WEB-DL
+  score: 50
+- name: 1080p WEB-DL (h264)
+  score: 20
+- name: 1080p WEBRip
+  score: 20
+- name: 720p Bluray
+  score: 10
+- name: 720p WEB-DL
+  score: 10
+- name: 720p WEBRip
+  score: 10
+- name: AV1
+  score: -50
+- name: VP9
+  score: -50
+- name: VVC
+  score: -50
+- name: 2160p
+  score: -200
+- name: 2160p Balanced Tier 1
+  score: -200
+- name: 2160p Balanced Tier 2
+  score: -200
+- name: 2160p Bluray
+  score: -200
+- name: 2160p Quality Tier 1
+  score: -200
+- name: 2160p Quality Tier 2
+  score: -200
+- name: 2160p Quality Tier 3
+  score: -200
+- name: 2160p Quality Tier 4
+  score: -200
+- name: 2160p Quality Tier 5
+  score: -200
+- name: 2160p Quality Tier 6
+  score: -200
+- name: 2160p Quality Tier 7
+  score: -200
+- name: 2160p Remux
+  score: -200
+- name: 2160p WEB-DL
+  score: -200
+- name: 2160p WEBRip
+  score: -200
+- name: 360p
+  score: -200
+- name: 480p
+  score: -200
+- name: Full Disc
+  score: -200
+- name: Full Disc (Quality Match)
+  score: -200
+- name: HDR
+  score: -200
+- name: HDR10
+  score: -200
+- name: HDR10 (Missing)
+  score: -200
+- name: HDR10 (Missing) (1080p)
+  score: -200
+- name: HDR10+
+  score: -200
+- name: Non Retail HDR
+  score: -200
+- name: UHD Bluray
+  score: -200
+- name: UHD Bluray (Missing)
+  score: -200
+- name: UHDBits
+  score: -200
+- name: x264 (2160p)
+  score: -200
+- name: x265 (Missing)
+  score: -200
+- name: Xvid
+  score: -200
+custom_formats_radarr: []
+custom_formats_sonarr: []
+qualities:
+- id: -1
+  name: 1080p
+  description: ''
+  qualities:
+  - id: 9
+    name: WEBDL-1080p
+  - id: 10
+    name: Bluray-1080p
+  - id: 11
+    name: WEBRip-1080p
+  - id: 12
+    name: HDTV-1080p
+- id: -2
+  name: 720p
+  description: ''
+  qualities:
+  - id: 13
+    name: Bluray-720p
+  - id: 14
+    name: WEBDL-720p
+  - id: 15
+    name: WEBRip-720p
+  - id: 16
+    name: HDTV-720p
+upgrade_until:
+  id: -1
+  name: 1080p
+language: must_english
